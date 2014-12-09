@@ -18,18 +18,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     // Add a web view
-	CGRect frame = CGRectInset(self.view.bounds, 2, 2);
-	UIWebView *webView = [[UIWebView alloc] initWithFrame:frame];
-	webView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-	webView.scalesPageToFit = TRUE;
-	[self.view addSubview:webView];
-	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
+    CGRect frame = CGRectInset(self.view.bounds, 2, 2);
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:frame];
+    webView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    webView.scalesPageToFit = TRUE;
+    [self.view addSubview:webView];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
     
     //Add test button on navigator bar
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithTitle:@"Join Meet" style:UIBarButtonItemStyleBordered target:self action:@selector(startMeet:)],nil];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithTitle:@"Join Meet" style:UIBarButtonItemStyleBordered target:self action:@selector(joinMeet:)],nil];
+    
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithTitle:@"Start Meet" style:UIBarButtonItemStyleBordered target:self action:@selector(startMeet:)],nil];
     
     // Fill in the App Client ID and Client Secret Key received from the app registration step from Moxtra
     NSString *APP_CLIENT_ID = @"uGvPYrH651o";
@@ -54,34 +56,8 @@
      } failure: ^(NSError *error) {
          NSLog(@"Setup user account failed, %@", [NSString stringWithFormat:@"error code [%d] description: [%@] info [%@]", [error code], [error localizedDescription], [[error userInfo] description]]);
      }];
- 
-    
 }
 
-
-- (void)startMeet:(id)sender
-{
-    [[Moxtra sharedClient] setMeetStyleWithColor:[UIColor lightGrayColor]];
-    
-    NSString *meetId = @"976858719";
-     
-     //Join Moxtra Meet
-     [[Moxtra sharedClient]
-       joinMeet: meetId
-        withUserName: @"maodou"
-       withDelegate: nil
-       inviteAttendeesBlock: nil
-       success: ^(NSString *meetID) {
-           NSLog(@"Join meet success with MeetID [%@]", meetID);
-       } failure: ^(NSError *error) {
-           NSLog(@"Join meet failed, %@", [NSString stringWithFormat:@"error code [%d] description: [%@] info [%@]", [error code], [error localizedDescription], [[error userInfo] description]]);
-       }];
-      return;
-      }
-    
-
-/*
-      
 - (void)startMeet:(id)sender
 {
     [[Moxtra sharedClient] setMeetStyleWithColor:[UIColor lightGrayColor]];
@@ -97,8 +73,47 @@
      }];
     return;
 }
- */
- 
+
+- (void)joinMeet:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!" message:@"Please enter the meet id:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField * alertTextField = [alert textFieldAtIndex:0];
+    alertTextField.keyboardType = UIKeyboardTypeNumberPad;
+    alertTextField.placeholder = @"Enter meet id";
+    [alert addButtonWithTitle:@"Continue"];
+    
+    [alert show];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [[Moxtra sharedClient] setMeetStyleWithColor:[UIColor lightGrayColor]];
+        
+        UITextField *textfield = [alertView textFieldAtIndex:0];
+        NSLog(@"meet id input: %@", textfield.text);
+        
+        NSString *meetId = textfield.text;
+        
+        //Join Moxtra Meet
+        [[Moxtra sharedClient]
+         joinMeet: meetId
+         withUserName: @"maodou"
+         withDelegate: nil
+         inviteAttendeesBlock: nil
+         success: ^(NSString *meetID) {
+             NSLog(@"Join meet success with MeetID [%@]", meetID);
+         } failure: ^(NSError *error) {
+             NSLog(@"Join meet failed, %@", [NSString stringWithFormat:@"error code [%d] description: [%@] info [%@]", [error code], [error localizedDescription], [[error userInfo] description]]);
+         }];
+        return;
+    }
+    else {
+        NSLog(@"user pressed Cancel");
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
