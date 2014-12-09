@@ -95,7 +95,7 @@
 		A2137CFB19B8EB9800F438CE /* Moxtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Moxtra.h; path = ../../MoxtraSDK.sdk/Moxtra.h; sourceTree = "<group>"; };
 		A2137CFC19B8EB9800F438CE /* MoxtraSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoxtraSDKResources.bundle; path = ../../MoxtraSDK.sdk/MoxtraSDKResources.bundle; sourceTree = "<group>"; };
 		A2137CFD19B8EB9800F438CE /* MXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXClient.h; path = ../../MoxtraSDK.sdk/MXClient.h; sourceTree = "<group>"; };
-		A2A9E085196C65D5002A61AB /* moxoSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moxoSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A9E085196C65D5002A61AB /* 毛豆网 beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "毛豆网 beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A9E088196C65D5002A61AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A2A9E08A196C65D5002A61AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A2A9E08C196C65D5002A61AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -194,7 +194,7 @@
 		A2A9E086196C65D5002A61AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A2A9E085196C65D5002A61AB /* moxoSDKSample.app */,
+				A2A9E085196C65D5002A61AB /* 毛豆网 beta.app */,
 				A2A9E0A6196C65D5002A61AB /* moxoSDKSampleTests.xctest */,
 			);
 			name = Products;
@@ -299,7 +299,7 @@
 			);
 			name = moxoSDKSample;
 			productName = moxoSDKSample;
-			productReference = A2A9E085196C65D5002A61AB /* moxoSDKSample.app */;
+			productReference = A2A9E085196C65D5002A61AB /* 毛豆网 beta.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A2A9E0A5196C65D5002A61AB /* moxoSDKSampleTests */ = {
@@ -522,7 +522,7 @@
 				GCC_PREFIX_HEADER = "moxoSDKSample/moxoSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "moxoSDKSample/moxoSDKSample-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "毛豆网 beta";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -540,7 +540,7 @@
 				GCC_PREFIX_HEADER = "moxoSDKSample/moxoSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "moxoSDKSample/moxoSDKSample-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "毛豆网 beta";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
