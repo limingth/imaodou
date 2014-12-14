@@ -34,8 +34,8 @@
 		8EF3FDAC196C92D20079F5FD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF3FDAB196C92D20079F5FD /* CoreVideo.framework */; };
 		8EF3FDB0196C93790079F5FD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF3FDAF196C93790079F5FD /* MobileCoreServices.framework */; };
 		8EF3FDB1196C9C870079F5FD /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF3FDAD196C932C0079F5FD /* EventKit.framework */; };
-		A2137CFF19B8EB9800F438CE /* MoxtraSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A2137CFC19B8EB9800F438CE /* MoxtraSDKResources.bundle */; };
-		A2137D0019B8ECB200F438CE /* MoxtraSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = A2137CFA19B8EB9800F438CE /* MoxtraSDK */; };
+		A2137D1E19B8F34200F438CE /* MoxtraConversationSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = A2137D1A19B8F34200F438CE /* MoxtraConversationSDK */; };
+		A2137D1F19B8F34200F438CE /* MoxtraConversationResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A2137D1B19B8F34200F438CE /* MoxtraConversationResources.bundle */; };
 		A2A9E089196C65D5002A61AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A9E088196C65D5002A61AB /* Foundation.framework */; };
 		A2A9E08B196C65D5002A61AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A9E08A196C65D5002A61AB /* CoreGraphics.framework */; };
 		A2A9E08D196C65D5002A61AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A9E08C196C65D5002A61AB /* UIKit.framework */; };
@@ -91,11 +91,11 @@
 		8EF3FDAB196C92D20079F5FD /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		8EF3FDAD196C932C0079F5FD /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		8EF3FDAF196C93790079F5FD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		A2137CFA19B8EB9800F438CE /* MoxtraSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = MoxtraSDK; path = ../../MoxtraSDK.sdk/MoxtraSDK; sourceTree = "<group>"; };
-		A2137CFB19B8EB9800F438CE /* Moxtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Moxtra.h; path = ../../MoxtraSDK.sdk/Moxtra.h; sourceTree = "<group>"; };
-		A2137CFC19B8EB9800F438CE /* MoxtraSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoxtraSDKResources.bundle; path = ../../MoxtraSDK.sdk/MoxtraSDKResources.bundle; sourceTree = "<group>"; };
-		A2137CFD19B8EB9800F438CE /* MXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXClient.h; path = ../../MoxtraSDK.sdk/MXClient.h; sourceTree = "<group>"; };
-		A2A9E085196C65D5002A61AB /* 毛豆网 beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "毛豆网 beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2137D1A19B8F34200F438CE /* MoxtraConversationSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = MoxtraConversationSDK; path = ../MoxtraConversationSDK.sdk/MoxtraConversationSDK; sourceTree = "<group>"; };
+		A2137D1B19B8F34200F438CE /* MoxtraConversationResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoxtraConversationResources.bundle; path = ../MoxtraConversationSDK.sdk/MoxtraConversationResources.bundle; sourceTree = "<group>"; };
+		A2137D1C19B8F34200F438CE /* Moxtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Moxtra.h; path = ../MoxtraConversationSDK.sdk/Moxtra.h; sourceTree = "<group>"; };
+		A2137D1D19B8F34200F438CE /* MXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXClient.h; path = ../MoxtraConversationSDK.sdk/MXClient.h; sourceTree = "<group>"; };
+		A2A9E085196C65D5002A61AB /* moxoSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moxoSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A9E088196C65D5002A61AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A2A9E08A196C65D5002A61AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A2A9E08C196C65D5002A61AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -121,7 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2137D0019B8ECB200F438CE /* MoxtraSDK in Frameworks */,
 				8EF3FDA6196C91960079F5FD /* Accelerate.framework in Frameworks */,
 				8EF3FD89196C750E0079F5FD /* AddressBook.framework in Frameworks */,
 				8EF3FD8A196C750E0079F5FD /* AddressBookUI.framework in Frameworks */,
@@ -136,6 +135,7 @@
 				8EF3FD92196C750E0079F5FD /* CoreMedia.framework in Frameworks */,
 				8EF3FD93196C750E0079F5FD /* CoreText.framework in Frameworks */,
 				8EF3FDAC196C92D20079F5FD /* CoreVideo.framework in Frameworks */,
+				A2137D1E19B8F34200F438CE /* MoxtraConversationSDK in Frameworks */,
 				8EF3FDB1196C9C870079F5FD /* EventKit.framework in Frameworks */,
 				A2A9E089196C65D5002A61AB /* Foundation.framework in Frameworks */,
 				8EF3FD94196C750E0079F5FD /* ImageIO.framework in Frameworks */,
@@ -168,22 +168,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A2137CF919B8EB5100F438CE /* Moxtra SDK */ = {
+		A2137D1219B8F22700F438CE /* Moxtra SDK */ = {
 			isa = PBXGroup;
 			children = (
-				A2137CFA19B8EB9800F438CE /* MoxtraSDK */,
-				A2137CFB19B8EB9800F438CE /* Moxtra.h */,
-				A2137CFC19B8EB9800F438CE /* MoxtraSDKResources.bundle */,
-				A2137CFD19B8EB9800F438CE /* MXClient.h */,
+				A2137D1A19B8F34200F438CE /* MoxtraConversationSDK */,
+				A2137D1B19B8F34200F438CE /* MoxtraConversationResources.bundle */,
+				A2137D1C19B8F34200F438CE /* Moxtra.h */,
+				A2137D1D19B8F34200F438CE /* MXClient.h */,
 			);
 			name = "Moxtra SDK";
-			path = moxoSDKSample;
 			sourceTree = "<group>";
 		};
 		A2A9E07C196C65D5002A61AB = {
 			isa = PBXGroup;
 			children = (
-				A2137CF919B8EB5100F438CE /* Moxtra SDK */,
+				A2137D1219B8F22700F438CE /* Moxtra SDK */,
 				A2A9E08E196C65D5002A61AB /* moxoSDKSample */,
 				A2A9E0AD196C65D5002A61AB /* moxoSDKSampleTests */,
 				A2A9E087196C65D5002A61AB /* Frameworks */,
@@ -194,7 +193,7 @@
 		A2A9E086196C65D5002A61AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A2A9E085196C65D5002A61AB /* 毛豆网 beta.app */,
+				A2A9E085196C65D5002A61AB /* moxoSDKSample.app */,
 				A2A9E0A6196C65D5002A61AB /* moxoSDKSampleTests.xctest */,
 			);
 			name = Products;
@@ -299,7 +298,7 @@
 			);
 			name = moxoSDKSample;
 			productName = moxoSDKSample;
-			productReference = A2A9E085196C65D5002A61AB /* 毛豆网 beta.app */;
+			productReference = A2A9E085196C65D5002A61AB /* moxoSDKSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A2A9E0A5196C65D5002A61AB /* moxoSDKSampleTests */ = {
@@ -330,7 +329,6 @@
 				ORGANIZATIONNAME = xebew;
 				TargetAttributes = {
 					A2A9E084196C65D5002A61AB = {
-						DevelopmentTeam = FVJDKW5BEE;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -342,7 +340,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A2A9E080196C65D5002A61AB /* Build configuration list for PBXProject "moxoSDKSample" */;
+			buildConfigurationList = A2A9E080196C65D5002A61AB /* Build configuration list for PBXProject "maodou" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -367,9 +365,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A9E0A1196C65D5002A61AB /* Images.xcassets in Resources */,
-				A2137CFF19B8EB9800F438CE /* MoxtraSDKResources.bundle in Resources */,
 				A2A9E093196C65D5002A61AB /* InfoPlist.strings in Resources */,
 				A2A9E09C196C65D5002A61AB /* Main.storyboard in Resources */,
+				A2137D1F19B8F34200F438CE /* MoxtraConversationResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +472,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "6c11c8ba-cdc6-447e-b3a9-bc9e716866bf";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -495,7 +492,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: AKAEDU Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -506,7 +503,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "dc75d3c8-6673-4777-a9b4-dc78e858da13";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -521,12 +517,14 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ming Li (U86N6FE8AP)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "moxoSDKSample/moxoSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "moxoSDKSample/moxoSDKSample-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = maodou;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../MoxtraConversationSDK.sdk,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6c11c8ba-cdc6-447e-b3a9-bc9e716866bf";
 				WRAPPER_EXTENSION = app;
 			};
@@ -541,12 +539,14 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: AKAEDU Inc.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "moxoSDKSample/moxoSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "moxoSDKSample/moxoSDKSample-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = maodou;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../MoxtraConversationSDK.sdk,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "dc75d3c8-6673-4777-a9b4-dc78e858da13";
 				WRAPPER_EXTENSION = app;
 			};
@@ -595,7 +595,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A2A9E080196C65D5002A61AB /* Build configuration list for PBXProject "moxoSDKSample" */ = {
+		A2A9E080196C65D5002A61AB /* Build configuration list for PBXProject "maodou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A2A9E0B5196C65D6002A61AB /* Debug */,
