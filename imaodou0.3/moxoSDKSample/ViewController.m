@@ -46,6 +46,7 @@
     // Initialize user using unique user identity
     MXUserIdentity *useridentity = [[MXUserIdentity alloc] init];
     useridentity.userIdentityType = kUserIdentityTypeIdentityUniqueID;
+    //useridentity.userIdentityType = kUserIdentityTypeEmail;
     useridentity.userIdentity = @"limingth";
     
     [[Moxtra sharedClient]
@@ -63,24 +64,46 @@
      }];
 
     //useridentity.userIdentity = @"user unique identity";
-    //useridentity.userIdentityType = kUserIdentityTypeEmail;
     
 }
 
 - (void)startChat:(id)sender
 {
     NSArray *array = [NSArray arrayWithObjects:
-                      @"gaoyancc",nil];
+                      @"gaoyancc@gmail.com",nil];
     
     NSString *conversationID = @"B016RkowP6k1tLQeMRDIrUD";
     
+    
     [[Moxtra sharedClient] inviteMembersWithUniqueIDs: array
+                                          binderID: conversationID
+                                           success: ^{
+                                               NSLog(@"inviteMembersWithUniqueIDs successfully");
+                                           } failure: ^(NSError *error) {
+                                               NSLog(@"inviteMembersWithUniqueIDs failed");
+                                           }];
+
+/*
+    [[Moxtra sharedClient] inviteMembersWithEmails: array
                                              binderID: conversationID
                                               success: ^{
                                                   NSLog(@"inviteMembersWithUniqueIDs successfully");
                                               } failure: ^(NSError *error) {
                                                   NSLog(@"inviteMembersWithUniqueIDs failed");
                                               }];
+*/
+    
+    [[Moxtra sharedClient] openChat: conversationID
+                            withPopupRect: CGRectMake(290, 538, 50, 50)
+                              success:^(NSString *conversationID) {
+                                  NSLog(@"start conversation success, id = %@", conversationID);
+                                  //self.conversationID1 = conversationID;
+                                  
+                              } failure:^(NSError *error) {
+                                  NSLog(@"start conversation failed");
+                              }];
+    
+    //    [[Moxtra sharedClient] setDelegate:self];
     
 /*
     [[Moxtra sharedClient] createChat:CGRectMake(290, 538, 50, 50)
