@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E96263B1A5320130045A2EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E96263A1A5320130045A2EC /* main.m */; };
+		1E96263E1A5320130045A2EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E96263D1A5320130045A2EC /* AppDelegate.m */; };
+		1E9626411A5320130045A2EC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9626401A5320130045A2EC /* FirstViewController.m */; };
+		1E9626441A5320130045A2EC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9626431A5320130045A2EC /* SecondViewController.m */; };
+		1E9626471A5320130045A2EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9626451A5320130045A2EC /* Main.storyboard */; };
+		1E9626491A5320130045A2EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9626481A5320130045A2EC /* Images.xcassets */; };
+		1E96264C1A5320130045A2EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E96264A1A5320130045A2EC /* LaunchScreen.xib */; };
+		1E9626581A5320150045A2EC /* myMaodouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9626571A5320150045A2EC /* myMaodouTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E9626521A5320150045A2EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E96262D1A5320130045A2EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E9626341A5320130045A2EC;
+			remoteInfo = myMaodou;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E9626351A5320130045A2EC /* myMaodou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myMaodou.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9626391A5320130045A2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E96263A1A5320130045A2EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E96263C1A5320130045A2EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1E96263D1A5320130045A2EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1E96263F1A5320130045A2EC /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		1E9626401A5320130045A2EC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		1E9626421A5320130045A2EC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		1E9626431A5320130045A2EC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		1E9626461A5320130045A2EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E9626481A5320130045A2EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1E96264B1A5320130045A2EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1E9626511A5320150045A2EC /* myMaodouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myMaodouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9626561A5320150045A2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E9626571A5320150045A2EC /* myMaodouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myMaodouTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E9626321A5320130045A2EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E96264E1A5320150045A2EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E96262C1A5320130045A2EC = {
+			isa = PBXGroup;
+			children = (
+				1E9626371A5320130045A2EC /* myMaodou */,
+				1E9626541A5320150045A2EC /* myMaodouTests */,
+				1E9626361A5320130045A2EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E9626361A5320130045A2EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E9626351A5320130045A2EC /* myMaodou.app */,
+				1E9626511A5320150045A2EC /* myMaodouTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E9626371A5320130045A2EC /* myMaodou */ = {
+			isa = PBXGroup;
+			children = (
+				1E96263C1A5320130045A2EC /* AppDelegate.h */,
+				1E96263D1A5320130045A2EC /* AppDelegate.m */,
+				1E96263F1A5320130045A2EC /* FirstViewController.h */,
+				1E9626401A5320130045A2EC /* FirstViewController.m */,
+				1E9626421A5320130045A2EC /* SecondViewController.h */,
+				1E9626431A5320130045A2EC /* SecondViewController.m */,
+				1E9626451A5320130045A2EC /* Main.storyboard */,
+				1E9626481A5320130045A2EC /* Images.xcassets */,
+				1E96264A1A5320130045A2EC /* LaunchScreen.xib */,
+				1E9626381A5320130045A2EC /* Supporting Files */,
+			);
+			path = myMaodou;
+			sourceTree = "<group>";
+		};
+		1E9626381A5320130045A2EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E9626391A5320130045A2EC /* Info.plist */,
+				1E96263A1A5320130045A2EC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E9626541A5320150045A2EC /* myMaodouTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E9626571A5320150045A2EC /* myMaodouTests.m */,
+				1E9626551A5320150045A2EC /* Supporting Files */,
+			);
+			path = myMaodouTests;
+			sourceTree = "<group>";
+		};
+		1E9626551A5320150045A2EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E9626561A5320150045A2EC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E9626341A5320130045A2EC /* myMaodou */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E96265B1A5320150045A2EC /* Build configuration list for PBXNativeTarget "myMaodou" */;
+			buildPhases = (
+				1E9626311A5320130045A2EC /* Sources */,
+				1E9626321A5320130045A2EC /* Frameworks */,
+				1E9626331A5320130045A2EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = myMaodou;
+			productName = myMaodou;
+			productReference = 1E9626351A5320130045A2EC /* myMaodou.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E9626501A5320150045A2EC /* myMaodouTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E96265E1A5320150045A2EC /* Build configuration list for PBXNativeTarget "myMaodouTests" */;
+			buildPhases = (
+				1E96264D1A5320150045A2EC /* Sources */,
+				1E96264E1A5320150045A2EC /* Frameworks */,
+				1E96264F1A5320150045A2EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E9626531A5320150045A2EC /* PBXTargetDependency */,
+			);
+			name = myMaodouTests;
+			productName = myMaodouTests;
+			productReference = 1E9626511A5320150045A2EC /* myMaodouTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E96262D1A5320130045A2EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "ming li";
+				TargetAttributes = {
+					1E9626341A5320130045A2EC = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					1E9626501A5320150045A2EC = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 1E9626341A5320130045A2EC;
+					};
+				};
+			};
+			buildConfigurationList = 1E9626301A5320130045A2EC /* Build configuration list for PBXProject "myMaodou" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E96262C1A5320130045A2EC;
+			productRefGroup = 1E9626361A5320130045A2EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E9626341A5320130045A2EC /* myMaodou */,
+				1E9626501A5320150045A2EC /* myMaodouTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E9626331A5320130045A2EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9626471A5320130045A2EC /* Main.storyboard in Resources */,
+				1E96264C1A5320130045A2EC /* LaunchScreen.xib in Resources */,
+				1E9626491A5320130045A2EC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E96264F1A5320150045A2EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E9626311A5320130045A2EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9626441A5320130045A2EC /* SecondViewController.m in Sources */,
+				1E96263E1A5320130045A2EC /* AppDelegate.m in Sources */,
+				1E9626411A5320130045A2EC /* FirstViewController.m in Sources */,
+				1E96263B1A5320130045A2EC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E96264D1A5320150045A2EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9626581A5320150045A2EC /* myMaodouTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E9626531A5320150045A2EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E9626341A5320130045A2EC /* myMaodou */;
+			targetProxy = 1E9626521A5320150045A2EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E9626451A5320130045A2EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E9626461A5320130045A2EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E96264A1A5320130045A2EC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E96264B1A5320130045A2EC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E9626591A5320150045A2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1E96265A1A5320150045A2EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E96265C1A5320150045A2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = myMaodou/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E96265D1A5320150045A2EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = myMaodou/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1E96265F1A5320150045A2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = myMaodouTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myMaodou.app/myMaodou";
+			};
+			name = Debug;
+		};
+		1E9626601A5320150045A2EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = myMaodouTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myMaodou.app/myMaodou";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E9626301A5320130045A2EC /* Build configuration list for PBXProject "myMaodou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9626591A5320150045A2EC /* Debug */,
+				1E96265A1A5320150045A2EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E96265B1A5320150045A2EC /* Build configuration list for PBXNativeTarget "myMaodou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E96265C1A5320150045A2EC /* Debug */,
+				1E96265D1A5320150045A2EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E96265E1A5320150045A2EC /* Build configuration list for PBXNativeTarget "myMaodouTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E96265F1A5320150045A2EC /* Debug */,
+				1E9626601A5320150045A2EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E96262D1A5320130045A2EC /* Project object */;
+}
