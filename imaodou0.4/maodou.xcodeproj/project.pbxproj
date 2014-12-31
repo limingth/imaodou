@@ -524,7 +524,7 @@
 					"$(inherited)",
 					../MoxtraConversationSDK.sdk,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = imaodou0.4;
 				PROVISIONING_PROFILE = "6c11c8ba-cdc6-447e-b3a9-bc9e716866bf";
 				WRAPPER_EXTENSION = app;
 			};
@@ -546,7 +546,7 @@
 					"$(inherited)",
 					../MoxtraConversationSDK.sdk,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = imaodou0.4;
 				PROVISIONING_PROFILE = "dc75d3c8-6673-4777-a9b4-dc78e858da13";
 				WRAPPER_EXTENSION = app;
 			};
