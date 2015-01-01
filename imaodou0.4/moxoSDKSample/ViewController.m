@@ -15,10 +15,16 @@
 
 @implementation ViewController
 
-NSString *status = @"SignUp";
+NSString *status = @"login";
 
 NSString *iOS_Group_ID = @"BB100CKVqIv7ZczcqSpo669";
 NSString *firstName, *lastName, *userName;
+NSString *firstName2, *lastName2, *userName2;
+
+UIBarButtonItem *joinchat;
+UIBarButtonItem *addfriend;
+UIBarButtonItem *login;
+UIBarButtonItem *logout;
 
 - (void)viewDidLoad
 {
@@ -35,18 +41,15 @@ NSString *firstName, *lastName, *userName;
 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://maodou.io"]]];
 #endif
 
-    UIBarButtonItem *joinchat = [[UIBarButtonItem alloc] initWithTitle:@"Join Chat" style:UIBarButtonItemStyleBordered target:self action:@selector(joinChat:)];
-    UIBarButtonItem *addfriend = [[UIBarButtonItem alloc] initWithTitle:@"Add a Friend" style:UIBarButtonItemStyleBordered target:self action:@selector(addFriend:)];
-    //IBarButtonItem *signup = [[UIBarButtonItem alloc] initWithTitle:@"Sign Up" style:UIBarButtonItemStyleDone target:self action:@selector(signup:)];
+    joinchat = [[UIBarButtonItem alloc] initWithTitle:@"Join Chat   " style:UIBarButtonItemStyleBordered target:self action:@selector(joinChat:)];
+    addfriend = [[UIBarButtonItem alloc] initWithTitle:@"Add a Friend   " style:UIBarButtonItemStyleBordered target:self action:@selector(addfriend:)];
+    login = [[UIBarButtonItem alloc] initWithTitle:@"Log In" style:UIBarButtonItemStyleDone target:self action:@selector(login:)];
+    logout = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStyleDone target:self action:@selector(logout:)];
     
-
     //self.navigationItem.leftItemsSupplementBackButton = YES;
     
     //Add "Add a Friend" button on left navigator bar
-    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:addfriend, nil];
-   
-    //Add "Join Chat" button on right navigator bar
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:joinchat,nil];
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects: joinchat, addfriend, nil];
     
     // Fill in the App Client ID and Client Secret Key received from the app registration step from Moxtra
     NSString *APP_CLIENT_ID = @"lB5Llgzp0wQ";
@@ -59,7 +62,10 @@ NSString *firstName, *lastName, *userName;
     
     if ([[Moxtra sharedClient] isUserLoggedIn] == 0)
     {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Sign Up your name here"
+        //Add "Log In" button on right navigator bar
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects: login, nil];
+
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Log In your name here"
                                                          message:@""
                                                         delegate:self
                                                cancelButtonTitle:@"Cancel"
@@ -81,6 +87,9 @@ NSString *firstName, *lastName, *userName;
     }
     else
     {
+        //Add "Log Out" button on right navigator bar
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects: logout, nil];
+
         firstName = [[Moxtra sharedClient] getUserFirstName];
         lastName = [[Moxtra sharedClient] getUserLastName];
         userName = [firstName stringByAppendingString: @" "];
@@ -94,11 +103,11 @@ NSString *firstName, *lastName, *userName;
     return;
 }
 
-- (void)addFriend:(id)sender
+- (void)addfriend:(id)sender
 {
-    NSLog(@"addFriend isUserLoggedIn %d , getUserName %@ %@ \n", [[Moxtra sharedClient] isUserLoggedIn], [[Moxtra sharedClient] getUserFirstName], [[Moxtra sharedClient] getUserLastName]);
+    NSLog(@"addfriend isUserLoggedIn %d , getUserName %@ %@ \n", [[Moxtra sharedClient] isUserLoggedIn], [[Moxtra sharedClient] getUserFirstName], [[Moxtra sharedClient] getUserLastName]);
 
-    status = @"AddFriend";
+    status = @"addfriend";
     
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add your friend's name here"
                                                      message:@""
@@ -125,17 +134,17 @@ NSString *firstName, *lastName, *userName;
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    UITextField *alertTextField1 = [alertView textFieldAtIndex:0];
-    UITextField *alertTextField2 = [alertView textFieldAtIndex:1];
-    
-    firstName = alertTextField1.text;
-    lastName = alertTextField2.text;
-    userName = [firstName stringByAppendingString: lastName];
-    
-    NSLog(@"Get a name: [%@ %@]", firstName, lastName);
-    
-    if (buttonIndex == 1 && [status isEqual: @"SignUp"]) {
-        NSLog(@"sign up your name is [%@ %@] %@", firstName, lastName, userName);
+    if (buttonIndex == 1 && [status isEqual: @"login"]) {
+        UITextField *alertTextField1 = [alertView textFieldAtIndex:0];
+        UITextField *alertTextField2 = [alertView textFieldAtIndex:1];
+        
+        firstName = alertTextField1.text;
+        lastName = alertTextField2.text;
+        userName = [firstName stringByAppendingString: lastName];
+        
+        NSLog(@"Get a name: [%@ %@]", firstName, lastName);
+        
+        NSLog(@"Log In your name is [%@ %@] %@", firstName, lastName, userName);
         // Initialize user using unique user identity
         MXUserIdentity *useridentity = [[MXUserIdentity alloc] init];
         useridentity.userIdentityType = kUserIdentityTypeIdentityUniqueID;
@@ -150,7 +159,9 @@ NSString *firstName, *lastName, *userName;
                                              success: ^{
                                                  NSLog(@"Setup user account %@ successfully! \n", firstName);
                                                  
-                                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations!  :)" message:[NSString stringWithFormat:@"Your account \"%@ %@\" is created sucessfully.", firstName, lastName] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                 self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects: logout, nil];
+                                                 
+                                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations!  :)" message:[NSString stringWithFormat:@"Your account: \"%@ %@\" \n is logged in sucessfully.", firstName, lastName] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                                  
                                                  [alert show];
                                                  
@@ -164,53 +175,85 @@ NSString *firstName, *lastName, *userName;
         return;
     }
     
-    if (buttonIndex == 1 && [status isEqual: @"AddFriend"]) {
-        NSLog(@"add your friend name is [%@ %@] %@", firstName, lastName, userName);
+    if (buttonIndex == 1 && [status isEqual: @"addfriend"]) {
+        UITextField *alertTextField1 = [alertView textFieldAtIndex:0];
+        UITextField *alertTextField2 = [alertView textFieldAtIndex:1];
         
-        NSArray *array = [NSArray arrayWithObjects: userName, nil];
+        firstName2 = alertTextField1.text;
+        lastName2 = alertTextField2.text;
+        userName2 = [firstName2 stringByAppendingString: lastName2];
+        
+        NSLog(@"Get a name: [%@ %@]", firstName2, lastName2);
+        
+        NSLog(@"add your friend name is [%@ %@] %@", firstName2, lastName2, userName2);
+        
+        NSArray *array = [NSArray arrayWithObjects: userName2, nil];
         [[Moxtra sharedClient] inviteMembersWithUniqueIDs: array
                                                  binderID: iOS_Group_ID
                                                   success: ^{
-                                                      NSLog(@"inviteMembersWithUniqueIDs %@ successfully! \n", firstName);
+                                                      NSLog(@"inviteMembersWithUniqueIDs %@ successfully! \n", firstName2);
                                                       
-                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations!  :)" message:[NSString stringWithFormat:@"Your friend account \"%@ %@\" is added into this chat group sucessfully.", firstName, lastName] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations!  :)" message:[NSString stringWithFormat:@"Your friend account \"%@ %@\" is added into this chat group sucessfully.", firstName2, lastName2] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                                       
                                                       [alert show];
                                                   } failure: ^(NSError *error) {
-                                                      NSLog(@"inviteMembersWithUniqueIDs %@ failed, %@ \n", firstName, [NSString stringWithFormat:@"error code [%d] description: [%@] info [%@]", [error code], [error localizedDescription], [[error userInfo] description]]);
+                                                      NSLog(@"inviteMembersWithUniqueIDs %@ failed, %@ \n", firstName2, [NSString stringWithFormat:@"error code [%d] description: [%@] info [%@]", [error code], [error localizedDescription], [[error userInfo] description]]);
                                                       
-                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry!  :(" message:[NSString stringWithFormat:@"Make sure your friend account \"%@ %@\" is already signed up by himself.", firstName, lastName] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry!  :(" message:[NSString stringWithFormat:@"Make sure your friend: \"%@ %@\" \n is already signed up by himself.", firstName2, lastName2] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                                       
                                                       [alert show];
                                                   }];
         return;
     }
     
-#if 0
-        // unlinkAccount
-        [[Moxtra sharedClient]
-         unlinkAccount: ^(BOOL success) {
-         }];
-#endif
-    
     NSLog(@"user pressed Cancel");
 }
 
-- (void)signup:(id)sender
+- (void)login:(id)sender
 {
     NSLog(@"Before isUserLoggedIn %d , getUserName %@ %@ \n", [[Moxtra sharedClient] isUserLoggedIn], [[Moxtra sharedClient] getUserFirstName], [[Moxtra sharedClient] getUserLastName]);
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Why not Add a Friend?" message:@"Please enter your friend name:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+    status = @"login";
     
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    UITextField * alertTextField = [alert textFieldAtIndex:0];
-    alertTextField.placeholder = @"Enter your first name";
-    [alert addButtonWithTitle:@"OK"];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Log In your name here"
+                                                     message:@""
+                                                    delegate:self
+                                           cancelButtonTitle:@"Cancel"
+                                           otherButtonTitles:@"OK", nil];
+    
+    alert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+    
+    UITextField * alertTextField1 = [alert textFieldAtIndex:0];
+    alertTextField1.keyboardType = UIKeyboardTypeDefault;
+    alertTextField1.placeholder = @"Enter first name: Bill";
+    [[alert textFieldAtIndex:0] setSecureTextEntry:NO];
+    
+    UITextField * alertTextField2 = [alert textFieldAtIndex:1];
+    alertTextField2.keyboardType = UIKeyboardTypeDefault;
+    alertTextField2.placeholder = @"Enter last name: Gates";
+    [[alert textFieldAtIndex:1] setSecureTextEntry:NO];
+    
     [alert show];
     
     return;
 }
 
+- (void)logout:(id)sender
+{
+#if 1
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"See you next time!" message:[NSString stringWithFormat:@"Your account: \"%@ %@\" \n is logged out!", firstName, lastName] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [alert show];
+    
+    // unlinkAccount
+    [[Moxtra sharedClient]
+     unlinkAccount: ^(BOOL success) {
+     }];
+
+
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects: login, nil];
+#endif
+}
 
 - (void)joinChat:(id)sender
 {
@@ -226,13 +269,13 @@ NSString *firstName, *lastName, *userName;
                                 } failure: ^(NSError *error) {
                                     NSLog(@"openChat failed, %@ \n", [NSString stringWithFormat:@"error code [%d] description: [%@] info [%@]", [error code], [error localizedDescription], [[error userInfo] description]]);
                                     
-                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are not in this chat" message:@"Ask group member to Add you in" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are not in this chat group" message:@"Ask a group member to Add you in" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                     
                                     [alert show];
                                 }];
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are not logged in" message:@"Please Sign Up your name first" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are not logged in" message:@"Please Log In your name first" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [alert show];
     }
@@ -250,39 +293,7 @@ NSString *firstName, *lastName, *userName;
                                   NSLog(@"start conversation failed \n");
                               }];
 #endif
- /*   [[Moxtra sharedClient] inviteMembersWithUniqueIDs: array
-                                          binderID: binderID
-                                           success: ^{
-                                               NSLog(@"inviteMembersWithUniqueIDs successfully");
-                                           } failure: ^(NSError *error) {
-                                               NSLog(@"inviteMembersWithUniqueIDs failed");
-                                           }];
 
-
-
-   [[Moxtra sharedClient] inviteMembersWithEmails: array
-                                             binderID: conversationID
-                                              success: ^{
-                                                  NSLog(@"inviteMembersWithUniqueIDs successfully");
-                                              } failure: ^(NSError *error) {
-                                                  NSLog(@"inviteMembersWithUniqueIDs failed");
-                                              }];
-*/
-
-    //    [[Moxtra sharedClient] setDelegate:self];
-    
-/*
-    [[Moxtra sharedClient] createChat:CGRectMake(290, 538, 50, 50)
-                   inviteMembersEmail:nil
-                inviteMembersUniqueID:nil
-                              success:^(NSString *conversationID) {
-        NSLog(@"start conversation success, id = %@", conversationID);
-        //self.conversationID1 = conversationID;
- 
-   } failure:^(NSError *error) {
-        NSLog(@"start conversation failed");
-    }];
-*/
 //    [[Moxtra sharedClient] setDelegate:self];
     return;
 }
